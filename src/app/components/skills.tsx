@@ -9,7 +9,12 @@ interface SkillsProps {
 export function Skills({ skills }: SkillsProps) {
   return (
     <Section title={SECTION_TITLES.skills} titleId="skills-section">
-      <TagList tags={skills} label="List of skills" variant="skills" />
+      <TagList
+        tags={skills}
+        label="List of skills"
+        variant="skills"
+        className="print:max-w-[72ch]"
+      />
     </Section>
   );
 }

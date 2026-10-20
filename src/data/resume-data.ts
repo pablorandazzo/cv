@@ -26,8 +26,7 @@ export const RESUME_DATA: ResumeData = {
   education: [
     {
       school: "Universidad de Buenos Aires - Facultad de Ciencias Económicas",
-      degree:
-        "Licenciatura en Sistemas de Información de las Organizaciones (95%)",
+      degree: "Licenciatura en Sistemas de Información de las Organizaciones",
       start: "2021",
       end: null,
     },
@@ -91,20 +90,10 @@ export const RESUME_DATA: ResumeData = {
     "APIs",
     "Webhooks",
     "Botmaker",
-    "AppSheet",
-    "Google Sheets",
-    "Apps Script",
     "Ecommerce",
     "Análisis funcional",
   ],
   projects: [
-    {
-      title: "Agente IA Preventa MercadoLibre",
-      type: "laboral",
-      techStack: ["n8n", "BigQuery"],
-      description:
-        "Diseño e integración de un agente de IA 24/7 con la API de Mercado Libre para responder consultas en preventa y optimizar las conversiones de venta.",
-    },
     {
       title: "Agente de IA Catalogación de productos",
       type: "laboral",
@@ -120,13 +109,6 @@ export const RESUME_DATA: ResumeData = {
       ],
       description:
         "Plataforma para agilizar la catalogación de productos de Grupo AXO en VentiApp. La solución propone mejoras en títulos y atributos, reduce tareas manuales y permite revisar los cambios antes de publicarlos.",
-    },
-    {
-      title: "Desarrollo +15 Chatbots Conversacionales",
-      type: "laboral",
-      techStack: ["Botmaker", "Google Sheets", "Análisis de Requerimientos"],
-      description:
-        "Desarrollé más de 15 chatbots conversacionales en Botmaker para automatizar consultas frecuentes, procesos de preventa y atención postventa en canales como WhatsApp, MercadoLibre y Tiendas Web.",
     },
     {
       title: "Eru Psicope",
