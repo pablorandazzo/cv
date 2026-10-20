@@ -35,7 +35,7 @@ export default function ResumePage() {
         id="main-content"
       >
         <section
-          className="mx-auto w-full max-w-2xl space-y-8 print:max-w-none print:space-y-3"
+          className="mx-auto w-full max-w-2xl space-y-10 print:max-w-none print:space-y-1"
           aria-label="Resume Content"
         >
           <div className="animate-fade-in" style={{ animationDelay: "0ms" }}>

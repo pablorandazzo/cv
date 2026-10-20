@@ -26,8 +26,11 @@ export interface EducationEntry {
   end: string | null;
 }
 
+export type ProjectType = "laboral" | "personal";
+
 export interface Project {
   title: string;
+  type: ProjectType;
   techStack: string[];
   description: string;
   link?: string;

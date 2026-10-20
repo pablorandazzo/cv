@@ -3,7 +3,13 @@ import { Section } from "@/components/ui/section";
 import { TagList } from "@/components/ui/tag-list";
 import { SECTION_TITLES } from "@/data/resume-data";
 import { displayUrl } from "@/lib/resume";
-import type { Project } from "@/lib/types";
+import type { Project, ProjectType } from "@/lib/types";
+import { cn } from "@/lib/utils";
+
+const TYPE_LABELS: Record<ProjectType, string> = {
+  laboral: "Laboral",
+  personal: "Personal",
+};
 
 interface ProjectLinkProps {
   title: string;
@@ -20,7 +26,7 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:underline"
+      className="after:absolute after:inset-0 hover:underline"
       aria-label={`${title} project (opens in new tab)`}
     >
       {title}
@@ -34,30 +40,36 @@ interface ProjectItemProps {
 }
 
 function ProjectItem({ project }: ProjectItemProps) {
-  const { title, description, techStack, link } = project;
+  const { title, type, description, techStack, link } = project;
 
   return (
-    <>
-      <h3 className="text-sm font-medium leading-snug print:leading-none">
-        <ProjectLink title={title} link={link} />
-      </h3>
+    <article
+      className={cn(
+        "relative flex flex-col gap-y-2 rounded-lg border border-border p-4 transition-colors print:break-inside-avoid print:gap-y-1 print:border-0 print:p-0",
+        link && "hover:border-foreground/20 hover:bg-muted/40"
+      )}
+    >
+      <div className="flex items-baseline justify-between gap-x-3">
+        <h3 className="text-[15px] font-semibold leading-snug print:text-[11.5px] print:leading-tight">
+          <ProjectLink title={title} link={link} />
+        </h3>
+        <span className="shrink-0 text-[11px] uppercase tracking-[0.12em] text-muted-foreground print:text-[9px]">
+          {TYPE_LABELS[type]}
+        </span>
+      </div>
       {link && (
         <a
-          className="hidden underline print:block print:break-words print:text-[10px] print:leading-tight"
+          className="text-[11px] leading-tight text-muted-foreground underline decoration-muted-foreground/60 print:break-words print:text-[10px]"
           href={link}
         >
           {displayUrl(link)}
         </a>
       )}
-      <p className="mt-1 text-pretty text-xs text-body print:mt-0.5 print:text-[10px] print:leading-tight">
+      <p className="text-pretty text-[13px] leading-relaxed text-body print:text-[10px] print:leading-tight">
         {description}
       </p>
-      <TagList
-        tags={techStack}
-        label="Technologies used"
-        className="mt-2 print:mt-0.5"
-      />
-    </>
+      <TagList tags={techStack} label="Technologies used" />
+    </article>
   );
 }
 
@@ -72,11 +84,9 @@ export function Projects({ projects }: ProjectsProps) {
       titleId="side-projects"
       className="scroll-mb-16"
     >
-      <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 print:grid-cols-2 print:gap-x-6 print:gap-y-1">
         {projects.map((project) => (
-          <article key={project.title} className="print:break-inside-avoid">
-            <ProjectItem project={project} />
-          </article>
+          <ProjectItem key={project.title} project={project} />
         ))}
       </div>
     </Section>

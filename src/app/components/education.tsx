@@ -13,12 +13,12 @@ function EducationItem({ education }: EducationItemProps) {
   return (
     <>
       <div className="flex items-baseline justify-between gap-x-2">
-        <h3 className="text-sm font-medium leading-snug print:leading-none">
+        <h3 className="text-[15px] font-semibold leading-snug print:leading-tight">
           {school}
         </h3>
         <DateRange start={start} end={end} label="Period" />
       </div>
-      <div className="mt-1.5 text-sm text-body print:mt-1 print:text-[12px] print:leading-tight">
+      <div className="mt-2 text-sm leading-relaxed text-body print:mt-1.5 print:text-[11.5px] print:leading-tight">
         {degree}
       </div>
     </>
@@ -32,7 +32,7 @@ interface EducationListProps {
 export function Education({ education }: EducationListProps) {
   return (
     <Section title={SECTION_TITLES.education} titleId="education-section">
-      <div className="space-y-4 print:space-y-1">
+      <div className="space-y-5 print:space-y-1.5">
         {education.map((item) => (
           <article key={item.school} className="print:break-inside-avoid">
             <EducationItem education={item} />

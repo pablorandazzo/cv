@@ -3,9 +3,9 @@ import avatar from "./avatar.jpg";
 
 export const RESUME_DATA: ResumeData = {
   name: "Pablo Alejandro Randazzo",
-  location: "CABA, Argentina",
+  location: "San Martín, Buenos Aires, Argentina",
   locationLink:
-    "https://www.google.com/maps/place/Ciudad+Autónoma+de+Buenos+Aires",
+    "https://www.google.com/maps/search/?api=1&query=Villa+José+León+Suárez,+Provincia+de+Buenos+Aires",
   about:
     "Futuro Licenciado en Sistemas · Especialista en Automatización con IA",
   summary:
@@ -17,11 +17,6 @@ export const RESUME_DATA: ResumeData = {
     tel: "+541122527577",
     social: [
       {
-        name: "GitHub",
-        url: "https://github.com/pablorandazzo",
-        icon: "github",
-      },
-      {
         name: "LinkedIn",
         url: "https://linkedin.com/in/pablorandazzo/",
         icon: "linkedin",
@@ -32,7 +27,7 @@ export const RESUME_DATA: ResumeData = {
     {
       school: "Universidad de Buenos Aires - Facultad de Ciencias Económicas",
       degree:
-        "Licenciatura en Sistemas de Información de las Organizaciones (81%)",
+        "Licenciatura en Sistemas de Información de las Organizaciones (95%)",
       start: "2021",
       end: null,
     },
@@ -47,15 +42,16 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Reply LATAM",
       link: "https://www.reply.com/",
-      badges: ["IA", "BigQuery", "n8n", "Google Sheets", "Apps Script"],
-      title: "AI Automation Specialist",
+      badges: ["IA", "BigQuery", "Eve", "n8n"],
+      title: "AI Automation Specialist Jr.",
       start: "2025",
       end: null,
       description:
         "Desarrollo de soluciones de automatización e inteligencia artificial para ecommerce y marketplaces.",
       highlights: [
+        "Actualmente lidero el desarrollo de una herramienta de optimización de contenidos para MercadoLibre basado en el framework de agentes EVE (Vercel)",
         "Desarrollé un agente de IA con BigQuery como base de datos vectorial y n8n como orquestador para automatizar respuestas de preventa en Mercado Libre, reduciendo el TMR en un 90%.",
-        "Lidero el desarrollo de una herramienta de optimización de contenidos para marketplaces basada en Google Sheets, integrando APIs mediante Apps Script y n8n.",
+        "Participo en el análisis funcional y en el desarrollo de automatizaciones para tareas frecuentes y repetitivas del equipo de operaciones."
       ],
     },
     {
@@ -101,7 +97,46 @@ export const RESUME_DATA: ResumeData = {
     "Ecommerce",
     "Análisis funcional",
   ],
-  projects: [],
+  projects: [
+    {
+      title: "Agente IA Preventa MercadoLibre",
+      type: "laboral",
+      techStack: ["n8n", "BigQuery"],
+      description:
+        "Diseño e integración de un agente de IA 24/7 con la API de Mercado Libre para responder consultas en preventa y optimizar las conversiones de venta.",
+    },
+    {
+      title: "Agente de IA Catalogación de productos",
+      type: "laboral",
+      techStack: [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Eve",
+        "PostgreSQL",
+        "Redis",
+        "BigQuery",
+        "APIs de VentiApp y Mercado Libre",
+      ],
+      description:
+        "Plataforma para agilizar la catalogación de productos de Grupo AXO en VentiApp. La solución propone mejoras en títulos y atributos, reduce tareas manuales y permite revisar los cambios antes de publicarlos.",
+    },
+    {
+      title: "Desarrollo +15 Chatbots Conversacionales",
+      type: "laboral",
+      techStack: ["Botmaker", "Google Sheets", "Análisis de Requerimientos"],
+      description:
+        "Desarrollé más de 15 chatbots conversacionales en Botmaker para automatizar consultas frecuentes, procesos de preventa y atención postventa en canales como WhatsApp, MercadoLibre y Tiendas Web.",
+    },
+    {
+      title: "Eru Psicope",
+      type: "personal",
+      techStack: ["Astro", "Sveltia CMS"],
+      description:
+        "Landing page de recursos psicopedagógicos (Astro + Sveltia CMS) donde Erica vende/regala materiales con categorías, páginas de detalle con CTA a WhatsApp y panel /admin para editar contenido sin tocar código.",
+      link: "https://erupsicope.com.ar/",
+    },
+  ],
 };
 
 export const SECTION_TITLES = {

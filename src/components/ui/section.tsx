@@ -11,10 +11,10 @@ interface SectionProps {
 export function Section({ title, titleId, className, children }: SectionProps) {
   return (
     <section
-      className={cn("flex min-h-0 flex-col gap-y-3 print:gap-y-1", className)}
+      className={cn("flex min-h-0 flex-col gap-y-4 print:gap-y-1", className)}
     >
       <h2
-        className="text-sm lowercase leading-[1.4] text-muted-foreground print:leading-tight"
+        className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground print:leading-tight"
         id={titleId}
       >
         {title}

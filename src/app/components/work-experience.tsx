@@ -35,21 +35,21 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
 
   return (
     <>
-      <div className="space-y-1 print:space-y-0.5">
+      <div className="space-y-1.5 print:space-y-1">
         <div className="flex items-baseline justify-between gap-x-2">
-          <h3 className="text-sm font-medium leading-snug print:leading-none">
+          <h3 className="text-[15px] font-semibold leading-snug print:leading-tight">
             <CompanyLink company={company} link={link} />
           </h3>
           <DateRange start={start} end={end} label="Employment period" />
         </div>
-        <h4 className="text-sm leading-snug text-body print:text-[12px] print:leading-tight">
+        <h4 className="text-sm leading-relaxed text-body print:text-[11.5px] print:leading-tight">
           {title}
         </h4>
       </div>
-      <div className="mt-1.5 text-pretty text-xs text-body print:mt-0.5 print:text-[10px] print:leading-tight">
+      <div className="mt-2 text-pretty text-sm leading-relaxed text-body print:mt-1 print:text-[10.5px] print:leading-tight">
         {description}
         {highlights && highlights.length > 0 && (
-          <ul className="list-inside list-disc">
+          <ul className="mt-1 list-outside list-disc space-y-0.5 pl-4 marker:text-muted-foreground print:space-y-1">
             {highlights.map((highlight) => (
               <li key={highlight}>{highlight}</li>
             ))}
@@ -59,7 +59,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
       <TagList
         tags={badges}
         label="Technologies used"
-        className="mt-2 print:mt-0.5"
+        className="mt-2.5 print:mt-1.5"
       />
     </>
   );
@@ -72,7 +72,7 @@ interface WorkExperienceProps {
 export function WorkExperience({ work }: WorkExperienceProps) {
   return (
     <Section title={SECTION_TITLES.work} titleId="work-experience">
-      <div className="space-y-8 print:space-y-1.5">
+      <div className="space-y-10 print:space-y-1.5">
         {work.map((item) => (
           <article
             key={`${item.company}-${item.start}`}

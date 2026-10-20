@@ -58,8 +58,8 @@ export function getContactLinks({
   }
   if (contact.tel) {
     links.push({
-      label: "Phone",
-      href: `tel:${contact.tel}`,
+      label: "WhatsApp",
+      href: `https://wa.me/${contact.tel.replace(/\D/g, "")}`,
       text: contact.tel,
       icon: "phone",
     });

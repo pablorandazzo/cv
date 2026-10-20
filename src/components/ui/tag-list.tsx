@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 const variants = {
-  tags: "text-xs leading-relaxed text-muted-foreground print:text-[9px] print:leading-snug",
+  tags: "text-xs leading-relaxed text-muted-foreground print:text-[10px] print:leading-snug",
   skills:
     "text-sm leading-relaxed text-body print:text-[10px] print:leading-snug",
 };

@@ -257,7 +257,7 @@ const checks = [
       const contacts = [
         personalWebsiteUrl,
         contact.email && `mailto:${contact.email}`,
-        contact.tel && `tel:${contact.tel}`,
+        contact.tel && `https://wa.me/${contact.tel.replace(/\D/g, "")}`,
         ...contact.social.map(({ url }) => url),
       ].filter(Boolean);
       if (links.length !== contacts.length) {

@@ -13,7 +13,7 @@ export function Summary({ summary, className }: AboutProps) {
       titleId="about-section"
       className={className}
     >
-      <div className="text-pretty text-sm text-body print:text-[12px] print:leading-tight">
+      <div className="text-pretty text-[15px] leading-relaxed text-body print:text-[11.5px] print:leading-snug">
         {summary}
       </div>
     </Section>
