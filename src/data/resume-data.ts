@@ -49,7 +49,7 @@ export const RESUME_DATA: ResumeData = {
         "Desarrollo de soluciones de automatización e inteligencia artificial para ecommerce y marketplaces.",
       highlights: [
         "Actualmente lidero el desarrollo de una herramienta de optimización de contenidos para MercadoLibre basado en el framework de agentes EVE (Vercel)",
-        "Desarrollé un agente de IA con BigQuery como base de datos vectorial y n8n como orquestador para automatizar respuestas de preventa en Mercado Libre, reduciendo el TMR en un 90%.",
+        "Desarrollé un agente de IA 24/7 con BigQuery como base de datos vectorial y n8n como orquestador para automatizar respuestas de preventa en Mercado Libre, reduciendo el TMR en un 90%.",
         "Participo en el análisis funcional y en el desarrollo de automatizaciones para tareas frecuentes y repetitivas del equipo de operaciones."
       ],
     },
@@ -63,7 +63,7 @@ export const RESUME_DATA: ResumeData = {
       description:
         "Relevamiento de requerimientos y desarrollo de soluciones alineadas con procesos de negocio.",
       highlights: [
-        "Lideré el desarrollo de más de 15 chatbots conversacionales con Botmaker para automatizar tareas repetitivas.",
+        "Lideré el desarrollo de más de 15 chatbots conversacionales con Botmaker para automatizar consultas frecuentes, preventa y postventa en WhatsApp, Mercado Libre y tiendas web.",
         "Desarrollé soluciones low-code con AppSheet.",
       ],
     },
