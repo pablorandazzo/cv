@@ -41,7 +41,7 @@ export const RESUME_DATA: ResumeData = {
   work: [
     {
       company: "Reply LATAM",
-      link: "https://www.reply.com/",
+      link: "https://www.replylatam.com/",
       badges: ["IA", "BigQuery", "Eve", "n8n"],
       title: "AI Automation Specialist Jr.",
       start: "2025",
@@ -56,7 +56,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Reply LATAM",
-      link: "https://www.reply.com/",
+      link: "https://www.replylatam.com/",
       badges: ["Botmaker", "AppSheet", "Low-code", "Análisis funcional"],
       title: "Analista Funcional Jr.",
       start: "2024",
@@ -70,7 +70,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Reply LATAM",
-      link: "https://www.reply.com/",
+      link: "https://www.replylatam.com/",
       badges: ["Operaciones", "Google Sheets"],
       title: "Analista de Operaciones",
       start: "2022",
