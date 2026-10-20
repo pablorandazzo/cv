@@ -35,5 +35,16 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# cloudflare / opennext
+/.open-next/
+/.wrangler/
+
+# local tooling
+dev.log
+.atl/
+
+# npm lockfile is not used (this repo is pnpm-based)
+package-lock.json
+
 # ide
 .idea
