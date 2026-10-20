@@ -14,45 +14,18 @@ export const contentType = "image/png";
 
 const colors = { bg: "#fafaf8", ink: "#1a1815", body: "#4a4744" };
 
-const avatarSignatures = {
-  "image/jpeg": [0xff, 0xd8, 0xff],
-  "image/png": [0x89, 0x50, 0x4e, 0x47],
-};
-
-async function readAvatar() {
-  const [path] = RESUME_DATA.avatar.src.split("?");
-  const media = path.match(
-    /(?<name>[^/]+)\.(?<hash>[^./]+)\.(?<extension>[^./]+)$/
-  )?.groups;
-  if (!media) {
-    throw new Error(
-      `The avatar ${RESUME_DATA.avatar.src} is not imported from an image file directly in src/data, so the OG image can't draw it.`
-    );
-  }
-  const file = `src/data/${media.name}.${media.extension}`;
-  const bytes = await readFile(join(process.cwd(), file));
-  const [type] =
-    Object.entries(avatarSignatures).find(([, signature]) =>
-      signature.every((byte, index) => bytes[index] === byte)
-    ) ?? [];
-  if (!type) {
-    throw new Error(
-      `${file} is not a JPEG or PNG, so the OG image can't draw it.`
-    );
-  }
-  return `data:${type};base64,${bytes.toString("base64")}`;
-}
-
 const readGeist = (file: string) =>
   readFile(
     join(process.cwd(), "node_modules/geist/dist/fonts/geist-sans", file)
   );
 
 export default async function Image() {
-  const [avatar, geistRegular, geistBold] = await Promise.all([
-    readAvatar(),
+  const [geistRegular, geistBold, avatar] = await Promise.all([
     readGeist("Geist-Regular.ttf"),
     readGeist("Geist-Bold.ttf"),
+    readFile(join(process.cwd(), "src/data/avatar.jpg")).then(
+      (bytes) => `data:image/jpeg;base64,${bytes.toString("base64")}`
+    ),
   ]);
   const currentRole = getCurrentRole(RESUME_DATA.work);
 
@@ -86,6 +59,7 @@ export default async function Image() {
             height: "150px",
             borderRadius: "10%",
             marginBottom: "2rem",
+            objectFit: "cover",
           }}
         />
         <div

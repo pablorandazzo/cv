@@ -1,4 +1,4 @@
-import { MapPinIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import type React from "react";
 import { GitHubIcon } from "@/components/icons/github-icon";
@@ -123,11 +123,10 @@ export function Header() {
 
         <PrintContact links={contactLinks} />
       </div>
-
       <Image
         className="size-28 shrink-0 rounded-xl bg-muted object-cover ring-1 ring-muted"
         src={RESUME_DATA.avatar}
-        alt={`${RESUME_DATA.name}'s profile picture`}
+        alt={`Foto de perfil de ${RESUME_DATA.name}`}
         width={112}
         height={112}
         preload={true}

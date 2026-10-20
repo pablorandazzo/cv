@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "profile",
-    locale: "en_US",
+    locale: "es_AR",
     url: "/",
     siteName: `${RESUME_DATA.name}'s CV`,
   },
@@ -74,7 +74,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${GeistMono.variable} ${geistPixelSquare.variable}`}
     >
       <body>

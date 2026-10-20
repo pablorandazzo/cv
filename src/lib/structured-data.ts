@@ -18,8 +18,8 @@ export function generateResumeStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    name: `${name} - Professional Resume`,
-    description: `Professional resume and portfolio of ${name}, ${about}`,
+    name: `${name} - Currículum profesional`,
+    description: `Currículum profesional de ${name}. ${about}`,
     url: siteUrl,
     mainEntity: {
       "@type": "Person",
